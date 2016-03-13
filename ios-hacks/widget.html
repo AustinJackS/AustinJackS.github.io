@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html style='background: url(http://dciphoneexperts.com/wp-content/uploads/2015/08/descarga-wallpapers-ios-9-iphone-ipad-1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;'>
+<body>
+<button onclick="mkf();">Add Widget</button>
+<button onclick="rmf();">Remove Widget</button>
+<h2 id="marker" style="visibility: hidden;">JavaScript to Create and Insert Iframe</h2>
+<script>
+function rmf() {
+	var d2 = prompt('remove id:','');
+	var element = document.getElementById(d2);
+	element.parentNode.removeChild(element);
+}
+function mkf() {
+	var d = prompt('id:','');
+	var sc = prompt('site:','');
+	var wth = prompt('width:','');
+	var hgt = prompt('height:','');
+	var ifrm = document.createElement('iframe');
+	ifrm.setAttribute('id', d); 
+
+	var el = document.getElementById('marker');
+	el.parentNode.insertBefore(ifrm, el);
+
+
+	ifrm.setAttribute('src', sc);
+	ifrm.setAttribute('width', wth);
+	ifrm.setAttribute('height', hgt);
+}
+
+</script>
+</body>
+</html>
