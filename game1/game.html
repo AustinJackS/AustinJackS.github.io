@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="cvs" width="500px" height="500px"
+style="border:1px solid #000000;">
+</canvas>
+<p id="1"></p>
+<script src="events.js"</script>
+<script>
+function handle(a,b) {
+	document.getElementById("1").innerHTML = "X pos: "+a+" Y pos:"+b
+}
+addv("cvs","touchstart",handle)
+</script>
+</body>
+</html>
