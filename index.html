@@ -1,12 +1,9 @@
 <html>
 <body>
 <script>
-if ('Notification' in window) {
-  Notification.requestPermission();
-}
-if ('Notification' in window) {
-  new Notification('Notify you');
-}
+Notification.requestPermission().then(function(result) {
+  console.log(result);
+});
 </script>
 </body>
 </html>
