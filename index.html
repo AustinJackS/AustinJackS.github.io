@@ -53,7 +53,7 @@ function notifyMe() {
 function sendNote() {
   var notification = new Notification('Turn of unused appliances', { body: "It's been 1 hour, remember to turn of your unused appliances"});
 }
-setInterval(sendNote, 1000 * 60);
+setInterval(sendNote, 1000 * 60 * 60);
 </script>
 </body>
 </html>
