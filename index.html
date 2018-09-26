@@ -29,7 +29,10 @@ function notifyMe() {
   // Finally, if the user has denied notifications and you
   // want to be respectful there is no need to bother them any more.
 }
-var notification = new Notification('Turn of unused appliances', { body: "remember to turn of your unused appliances"});
+function sendNote() {
+  var notification = new Notification('Turn of unused appliances', { body: "remember to turn of your unused appliances"});
+}
+setInterval(sendNote, 1000 * 60 * 60);
 </script>
 </body>
 </html>
