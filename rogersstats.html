@@ -470,7 +470,7 @@ NEW
 <div class="trn-defstats trn-defstats--width4">
 <div class="trn-defstat trn-defstat--large">
 <div class="trn-defstat__name">Wins</div>
-<div class="trn-defstat__value">{{ overviewStats['Top1'].displayValue }}</div>
+<div class="trn-defstat__value">1</div>
 <trn-percentilebar v-if="overviewStats['Top1'].percentile" :value="overviewStats['Top1'].percentile"></trn-percentilebar>
 <div class="trn-defstat__rank" v-if="overviewStats['Top1'].rank">#{{ overviewStats['Top1'].rank.toLocaleString() }}</div>
 </div>
@@ -522,7 +522,7 @@ NEW
 <div class="trn-defstats trn-defstats--width4">
 <div class="trn-defstat trn-defstat--large">
 <div class="trn-defstat__name">Wins</div>
-<div class="trn-defstat__value">{{ rollingStats['Wins'].displayValue }}</div>
+<div class="trn-defstat__value">1 (Carried)</div>
 <div class="trn-percentilebar"></div>
 </div>
 <div class="trn-defstat trn-defstat--large">
@@ -642,7 +642,7 @@ NEW
 </div>
 <div class="trn-simplematch__stat" v-if="match.matches > 1">
 <div class="trn-simplematch__stat-name">Wins</div>
-<div class="trn-simplematch__stat-value">{{ match.top1 }}</div>
+<div class="trn-simplematch__stat-value">rebooted 3 times</div>
 </div>
 <div class="trn-simplematch__stat">
 <div class="trn-simplematch__stat-name">Mode</div>
