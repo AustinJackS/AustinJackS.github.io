@@ -7,6 +7,7 @@
 var peer = new Peer(); 
 console.log(peer.id)
 peer.on('connection', function(conn) {
+  var conn2=conn;
   conn.on('data', function(data){
     // Will print id of connection
     console.log(data);
