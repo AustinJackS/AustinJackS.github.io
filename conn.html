@@ -11,7 +11,7 @@ var conn = peer.connect(connid);
 // on open will be launch when you successfully connect to PeerServer
 conn.on('open', function(){
   // here you have conn.id
-  conn.send('connected @'+peer.id);
+  conn.send(peer.id);
 });
 conn.on('data', function(data){
     // Will print id of connection
