@@ -5,9 +5,10 @@
 <body>
 <script>
 var peer = new Peer(); 
+var conn2;
 console.log(peer.id)
 peer.on('connection', function(conn) {
-  var conn2=conn;
+  conn2=conn;
   conn.on('data', function(data){
     // Will print id of connection
     console.log(data);
