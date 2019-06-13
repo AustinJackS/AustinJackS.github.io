@@ -6,11 +6,15 @@
 <script>
 var peer = new Peer(); 
 var conn2;
+var conn5;
 console.log(peer.id)
 peer.on('connection', function(conn) {
   conn2=conn;
   conn.on('data', function(data){
     // Will print id of connection
+    if (data[0]="#") {
+      var conn5 = peer.connect(data.substr(1));
+    }
     console.log(data);
   });
 });
