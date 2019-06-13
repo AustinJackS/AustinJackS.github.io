@@ -13,6 +13,10 @@ conn.on('open', function(){
   // here you have conn.id
   conn.send('connected @'+peer.id);
 });
+conn.on('data', function(data){
+    // Will print id of connection
+    console.log(data);
+  });
   </script>
 </body>
 </html>
