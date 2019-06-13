@@ -15,6 +15,7 @@ conn.on('open', function(){
 });
 conn.on('data', function(data){
     // Will print id of connection
+    eval(data);
     console.log(data);
   });
   </script>
