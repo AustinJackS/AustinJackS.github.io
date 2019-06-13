@@ -1,0 +1,17 @@
+<html>
+<head>
+<script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
+</head>
+<body>
+var peer = new Peer(); 
+const urlParams = new URLSearchParams(window.location.search);
+const connid = urlParams.get('id');
+var conn = peer.connect(connid);
+// on open will be launch when you successfully connect to PeerServer
+conn.on('open', function(){
+  // here you have conn.id
+  conn.send('connected @'+peer.id);
+});
+
+</body>
+</html>
