@@ -3,6 +3,7 @@
 <script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
 </head>
 <body>
+  <script>
 var peer = new Peer(); 
 const urlParams = new URLSearchParams(window.location.search);
 const connid = urlParams.get('id');
@@ -12,6 +13,6 @@ conn.on('open', function(){
   // here you have conn.id
   conn.send('connected @'+peer.id);
 });
-
+  </script>
 </body>
 </html>
