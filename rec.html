@@ -1,0 +1,17 @@
+<html>
+<head>
+<script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
+</head>
+<body>
+<script>
+var peer = new Peer(); 
+console.log(peer.id)
+peer.on('connection', function(conn) {
+  conn.on('data', function(data){
+    // Will print id of connection
+    console.log(data);
+  });
+});
+</script>
+</body>
+</html>
