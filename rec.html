@@ -13,7 +13,8 @@ peer.on('connection', function(conn) {
   conn.on('data', function(data){
     // Will print id of connection
     if (data[0]="#") {
-      var conn5 = peer.connect(data.substr(1));
+      conn5 = peer.connect(data.substr(1));
+      console.log("connected back");
     }
     console.log(data);
   });
